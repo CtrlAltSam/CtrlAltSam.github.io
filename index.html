@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/house.webp">
+    <title>Sam's Site</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="drop-up">
+        <button class="box border" onclick="toggleDropUp()">
+        <b>Start</b>
+        </button>
+        <div class="drop-up-content" id="dropUpContent">
+          
+          <a onclick="openTab(1)">
+            <img src="images/earth.gif">
+            Explorer
+          </a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <button class="box border" id="tab1" onclick="closeTab(1)" style="display: inline-block;">
+        Explorer
+      </button>
+      <button class="box border" id="tab2" onclick="closeTab(2)" style="display: none;">
+        Contact Card
+      </button>
+      <p id="clock" style="float: right;"></p>
+    </div>
+    <div class="icons">
+      <button class="icon opennew" data-target="https://github.com/CtrlAltSam">
+        <img src="./images/github-mark-white.png" style="height: 32;width: 32;">
+        <br>
+        GitHub
+      </button>
+      <button class="icon" onclick="openTab(2)">
+        <img src="images/contactCard.png">
+        <br>
+        Contact Card
+      </button>
+    </div>
+    <div id="window1" class="window draggable" style="z-index: 1004; display: block;">
+      <div class="header">
+        <img src="images/earth.gif">
+        <b>Explorer</b>
+        <button class="x-button border" onclick="closeTab(1)">X</button>
+      </div>
+      <span class="explorer">
+          <div class="explorer-nav">
+            <span class="address-text">You are here</span>
+            <img src="./images/Pointer-Side.png">
+            <span class="search-bar">
+              <span id="SearchBar" class="search-bar-text">https://ctrlaltsam.github.io/home</span>
+            </span>
+          </div>
+          <div class="explorer-nav">
+            <span class="bookmark" data-src="html/home.html" onclick="loadWindow(this)">
+              Home
+            </span>
+            <span class="bookmark" data-src="html/about.html" onclick="loadWindow(this)">
+              About
+            </span>
+            <span class="bookmark" data-src="html/projects.html" onclick="loadWindow(this)">
+              Projects
+            </span>
+          </div>
+          <div class="content">
+            <iframe src="./html/home.html"   width="100%" height="100%" id="frame1">
+
+            </iframe>
+          </div>
+      </span>
+    </div>
+    <div id="window2" class="window draggable">
+      <div class="header">
+        <img src="images/contactCard.png">
+        <b>Contact Card</b>
+        <button class="x-button border" onclick="closeTab(2)">X</button>
+      </div>
+      <div class="content">
+        <div class="row">
+          <img src="images/user.png">
+          <div class="description">
+            <h1>Info</h1>
+            <p>Name: Samuel Spencer</p>
+            <p>Degree: Bachelor of Science in Computer Science</p>
+            <p>School: Virginia Tech</p>
+          </div>
+        </div>
+        <div class="subtitle">
+          <i>Links</i>
+        </div>
+        <div class="links">
+          <div class="link">
+            <a href="https://github.com/CtrlAltSam" target="_blank">
+              <img src="images/github-mark-white.png">
+            </a>
+          </div>
+          <div class="link">
+            <a href="https://app.joinhandshake.com/profiles/wafnjh" target="_blank">
+              <img src="images/handshake.png">
+            </a>
+          </div>
+          <div class="link">
+            <a href="https://www.linkedin.com/in/sam-s-b76671388/" target="_blank">
+              <img src="images/LinkedIn_icon.svg.webp">
+            </a>
+          </div>
+          <div class="link">
+            <img src="images/gmail.webp" onclick="copyEmail()">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

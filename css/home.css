@@ -1,0 +1,103 @@
+@import url("./base.css");
+body{
+    background-color: #eceae3;
+}
+
+h1{
+    text-align: center;
+    font-size: 27px;
+    line-height: 25px;
+    padding: 0px;
+    margin: 0px;
+    color: var(--dark)
+}
+
+.badges{
+    text-align: center;
+    padding: 15px;
+}
+
+.badges .badge{
+    height: 100px;
+    width: 100px;
+    border: none;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.badges .badge img{
+    height: 100px;
+    width: 100px;
+    border: none;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.badges .badge .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.badges .badge .middle p{
+    background-color: var(--mid);
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.badges .badge:hover img{
+    opacity: 0.3;
+}
+
+.badges .badge:hover .middle{
+    opacity: 1;
+}
+
+.begin{
+    float: left;
+    margin-left: 1px;
+    width: 250px;
+}
+
+.row img{
+    border: 2px solid var(--shadow);
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.project h1{
+    float: left;
+}
+
+.project .description{
+    float: left;
+    margin-left: 1px;
+    width: 250px;
+}
+
+.project .image{
+    height: 200px;
+    width: 200px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.project .image img{
+    height: 200px;
+    width: 200px;
+    transition: transform .2s;
+}
+
+.project .image img:hover {
+    transform: scale(1.15);
+}
+
+

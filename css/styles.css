@@ -1,0 +1,348 @@
+@import url("base.css");
+
+body{
+  background: #ffffff;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(128, 139, 156, 1) 100%);
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  padding: 4px;
+  color: var(--darkest);
+  background-color: var(--light);
+  outline: 2px solid var(--lightest);
+  font-size: 14px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+#clock {
+  background-color: var(--light);
+  padding: 5px;
+  margin-top: 1px;
+  margin-right: 10px;
+  border: 2px solid var(--lightest);
+  border-left: 2px solid var(--darkest);
+  border-top: 2px solid var(--darkest);
+  font-weight: 200;
+}
+
+.draggable {
+  position: absolute;
+  z-index: 1000;
+}
+
+.window {
+  display: none;
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+  margin-top: 5px;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 0px 1px 2px var(--dark);
+}
+
+.header {
+  height: 20px;
+  background: linear-gradient(90deg, var(--dark) 0%, #00000000 100%), var(--dark);
+  border: 2px solid var(--light);
+  color: var(--contrastbg);
+  text-align: left;
+  line-height: 20px;
+  padding: 5px;
+}
+
+.x-button {
+  float: right;
+  background-color: var(--light);
+  cursor: pointer;
+}
+
+.box {
+  border: none;
+  border-right: 1px solid var(--darkest);
+  background-color: var(--light);
+  padding: 7px;
+  display: inline-block;
+}
+
+.border {
+  border: 2px solid var(--lightest);
+  border-right: 2px solid var(--darkest);
+  border-bottom: 2px solid var(--darkest);
+}
+
+.border:active,
+.border:focus {
+  border: 2px solid var(--dark);
+  border-right: 2px solid #FFF1F7;
+  border-bottom: 2px solid #FFF1F7;
+}
+
+.explorer-nav {
+  height: 16px;
+  margin: 2px;
+  padding: 3px;
+  padding-top: 5px;
+  text-align: left;
+  border-top: 1px solid var(--lightest);
+  border-left: 1px solid var(--lightest);
+  outline: 1px solid var(--shadow);
+  font-size: 13px;
+  position: relative;
+  background-color: var(--light);
+}
+
+.explorer-nav .bookmark {
+  padding: 2px;
+  margin-left: 2px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+
+.explorer-nav .bookmark:hover {
+  box-shadow: 1px 1px 0px var(--shadow), -1px -1px 0px var(--lightest);
+}
+
+
+.explorer-nav .bookmark:active {
+  box-shadow: 1px 1px 0px var(--lightest), -1px -1px 0px var(--shadow);
+}
+
+.explorer-nav .search-bar {
+  float: left;
+  margin-left: 5px;
+  width: 75%;
+  padding-left: 5px;
+  background-color: var(--lightest);
+  box-shadow: inset 1px 1px 0px var(--shadow), -1px -1px 0px var(--darkest);
+}
+
+.explorer-nav .search-bar-text:hover {
+  background-color: var(--dark);
+  color: white;
+  padding: 0px;
+}
+
+.explorer-nav img{
+  float: left;
+  margin-left: 5px;
+}
+
+.explorer-nav .address-text {
+  float: left;
+  margin-left: 5px;
+}
+
+.content {
+  padding: 5px;
+}
+
+.header img{
+  height: 20px;
+  width: 20px;
+  padding-right: 5px;
+  float: left;
+}
+
+#window1 {
+  display: block;
+  padding-bottom: 5px;
+  left: 700px;
+  bottom: 19%;
+  width: 513px;
+  height: 630px;
+}
+
+#window1 .content {
+  width: 501px;
+  height: 530px;
+}
+
+#window2 {
+  display: hidden;
+  padding-bottom: 5px;
+  left: 100px;
+  top: 200px;
+  bottom: 19%;
+  width: 513px;
+  height: 330px;
+}
+
+#window2 .content{
+  padding: 5px;
+}
+
+#window2 .row{
+  height: 175px;
+  padding: 2px;
+}
+
+#window2 .row img{
+  height: 175px;
+  width: 175px;
+}
+
+#window2 .row .description{
+  display: inline-block;
+  width: 250px;
+  height: 175px;
+  vertical-align: top;
+}
+
+#window2 .row .description h1{
+  padding: 0px;
+  margin: 0px;
+}
+
+#window2 .links{
+  text-align: center;
+}
+
+#window2 .links .link{
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#window2 .links .link img{
+  height: 75px;
+  width: 75px;
+  transition: transform .2s;
+}
+
+#window2 .links .link img:hover{
+  transform: scale(1.15);
+}
+
+
+
+.icons {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.icons .icon {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #ffffff00;
+  border: none;
+  padding: 5px;
+  margin: 3px;
+  color: var(--darkest);
+  font-weight: 900;
+  font-family: 'w95fa';
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  height: 64px;
+  width: 60px;
+  position: relative;
+  text-shadow:
+  -1px -1px 0 #ffffff70,
+  1px -1px 0 #ffffff70,
+  -1px 1px 0 #ffffff70,
+  1px 1px 0 #ffffff70;  
+
+}
+
+
+.icons .icon:hover {
+  outline: 1px dotted #ffffff99;
+  background-color: #ffffff20;
+}
+
+
+.icons .icon:active {
+  background-color: #ffffff40;
+  outline: 1px dotted white;
+}
+
+.icons img {
+  filter: sepia(0.2);
+  width: 32px;
+  height: 32px;
+}
+
+.drop-up {
+  position: relative;
+  display: inline-block;
+}
+
+
+.drop-up-content {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: var(--light);
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1px 1px;
+  z-index: 1;
+  border: 2px solid var(--darkest);
+  border-left: 2px solid var(--lightest);
+  border-top: 2px solid var(--lightest);
+  outline: 1px solid var(--lightest)
+}
+
+
+.drop-up-content a {
+  display: flex;
+  align-items: center;
+  color: var(--darkest);
+  text-decoration: none;
+  padding: 4px;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+
+.drop-up-content a:hover {
+  background-color: var(--lightest);
+}
+
+
+.drop-up-content img {
+  image-rendering: pixelated;
+  padding-right: 5px;
+  height: 24px;
+  width: 24px;
+}
+
+
+
+.drop-divider {
+  width: 95%;
+  margin-left: 2%;
+  background-color: var(--lightest);
+  height: 1px;
+  border-top: 1px solid var(--shadow);
+}
+
+.show {
+  display: block;
+}
+
+.divider {
+  height: 20px;
+  width: 1px;
+  left: 2px;
+  right: 2px;
+  background-color: var(--darkest);
+  display: inline-block;
+  box-shadow: 0px 10px 0px var(--darkest), 0px 10px 0px var(--darkest);
+}
+

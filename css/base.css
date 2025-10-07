@@ -1,0 +1,71 @@
+body{
+    --background: linear-gradient(white, lightgray);
+    --contrastbg: #eceae3;
+    --lightest: #eceae3;
+    --light: #c6d1da;
+    --mid: #9DB2BF;
+    --shadow: #526D82;
+    --dark: #27374D;
+    --darkest: #191f19;
+}
+
+::selection {
+  background-color: var(--shadow);
+  color: var(--contrastbg);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  background-image: url('https://i.imgur.com/firO49n.png');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+  border-top: 2px solid var(--lighter);
+  border-left: 2px solid var(--lighter);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--shadow);
+  box-shadow: none;
+  background-image: none;
+  border: 2px solid var(--light);
+  border-top: 2px solid var(--dark);
+  border-left: 2px solid var(--dark);
+}
+
+::-webkit-scrollbar-button {
+  background-image: url('https://i.imgur.com/yzJJ1bz.png');
+  height: 15px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background-position: -45px 0px;
+}
+
+::-webkit-scrollbar-button:vertical:end {
+  background-position: 0px 0px;
+}
+
+.subtitle {
+  font-weight: bolder;
+  border: 1px solid #c0cdb2;
+  border-left: 1px solid var(--dark);
+  border-top: 1px solid var(--dark);
+  padding: 2px;
+  background-color: var(--light);
+}
+
+.subtitle {
+  color: var(--lightest);
+  text-shadow:-1px -1px 0 var(--darkest),1px -1px 0 var(--darkest),-1px 1px 0 var(--darkest),1px 1px 0 var(--darkest); 
+  text-decoration: underline;
+  background-color: var(--shadow);
+}
