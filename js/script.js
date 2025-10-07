@@ -112,8 +112,3 @@ function loadWindow (elm){
   searchBar.textContent = 'https://ctrlaltsam.github.io/' + elm.dataset.src.slice(5,-5);
 	frame1.src = elm.dataset.src;
 }
-
-function copyEmail(){
-  navigator.clipboard.writeText("spencersama0@gmail.com");
-  alert("Email copied to clipboard");
-}
