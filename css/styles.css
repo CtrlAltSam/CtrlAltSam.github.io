@@ -153,6 +153,7 @@ body{
   display: block;
   padding-bottom: 5px;
   left: 700px;
+  top: 15px;
   bottom: 19%;
   width: 513px;
   height: 630px;
@@ -166,8 +167,8 @@ body{
 #window2 {
   display: hidden;
   padding-bottom: 5px;
-  left: 100px;
-  top: 200px;
+  left: 150px;
+  top: 500px;
   bottom: 19%;
   width: 513px;
   height: 330px;
@@ -220,6 +221,64 @@ body{
   transform: scale(1.15);
 }
 
+#window3 {
+  display: block;
+  padding-bottom: 5px;
+  left: 150px;
+  top: 50px;
+  bottom: 19%;
+  width: 513px;
+  height: 400px;
+}
+
+#window3 .content {
+  width: 503px;
+  height: 350px;
+}
+
+#window3 .content .constructImg{
+  width: 100%;
+  height: 100%;
+  transition: transform .2s;
+}
+
+#window3 .content .constructImg:hover{
+  transform: scale(1.05);
+}
+
+.barricade {
+  position: absolute;
+  width: 498px;
+  height: 100px;
+  bottom: 0px;
+  left: 7px;
+  transition: opacity 0.3s ease;
+}
+
+#window3 .content a:hover + .barricade{
+  opacity: 0;
+}
+
+#window4 {
+  display: block;
+  padding-bottom: 2px;
+  left: 1250px;
+  top: 50px;
+  bottom: 25%;
+  width: 250px;
+  height: 500px;
+}
+
+#window4 .content {
+  background-color: var(--contrastbg);
+  border: 2px solid var(--darkest);
+  border-right: 2px solid var(--lightest);
+  border-bottom: 2px solid var(--lightest);
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 232px;
+  height: 90%;
+}
 
 
 .icons {

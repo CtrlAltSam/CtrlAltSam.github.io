@@ -13,10 +13,17 @@
         <b>Start</b>
         </button>
         <div class="drop-up-content" id="dropUpContent">
-          
           <a onclick="openTab(1)">
             <img src="images/earth.gif">
             Explorer
+          </a>
+          <a onclick="openTab(3)">
+            <img src="images/traffic_cone.png">
+            Construction
+          </a>
+          <a onclick="openTab(4)">
+            <img src="images/todo.png">
+            Itinerary
           </a>
         </div>
       </div>
@@ -26,6 +33,12 @@
       </button>
       <button class="box border" id="tab2" onclick="closeTab(2)" style="display: none;">
         Contact Card
+      </button>
+      <button class="box border" id="tab3" onclick="closeTab(3)" style="display: inline-block;">
+        Construction Site
+      </button>
+      <button class="box border" id="tab4" onclick="closeTab(4)" style="display: inline-block;">
+        Itinerary
       </button>
       <p id="clock" style="float: right;"></p>
     </div>
@@ -41,7 +54,7 @@
         Contact Card
       </button>
     </div>
-    <div id="window1" class="window draggable" style="z-index: 1004; display: block;">
+    <div id="window1" class="window draggable">
       <div class="header">
         <img src="images/earth.gif">
         <b>Explorer</b>
@@ -68,7 +81,6 @@
           </div>
           <div class="content">
             <iframe src="./html/home.html"   width="100%" height="100%" id="frame1">
-
             </iframe>
           </div>
       </span>
@@ -113,6 +125,39 @@
           </div>
         </div>
       </div>
+    </div>
+    <div id="window3" class="window draggable">
+        <div class="header">
+          <img src="images/traffic_cone.png">
+          <b>Under Construction</b>
+          <button class="x-button border" onclick="closeTab(3)">X</button>
+        </div>
+        <div class="content">
+          <a href="https://github.com/CtrlAltSam/PirateDBooty" target="_blank">
+            <img src="images/piratedb.png" class="constructImg">
+          </a>
+          <img src="images/underConstruction.png" class="barricade">
+        </div>
+    </div>
+    <div id="window4" class="window draggable">
+        <div class="header">
+          <img src="images/todo.png">
+          <b>Itinerary</b>
+          <button class="x-button border" onclick="closeTab(4)">X</button>
+        </div>
+        <div class="content">
+          <div class="subtitle">
+          <i>#1</i>
+          </div>
+          <p>❏Implement a search method I came up with and add an experimenting section
+            in explorer.
+          </p>
+          <br>
+          <div class="subtitle">
+          <i>#2</i>
+          </div>
+          <p>❏Replace stock contruction barricade image with one made by myself.</p>
+        </div>      
     </div>
     <script src="./js/script.js"></script>
     <script src="./index.js"></script>
